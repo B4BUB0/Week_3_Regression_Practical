@@ -1,0 +1,106 @@
+{
+  "dataset": {
+    "rows": 365,
+    "columns": [
+      "Stock_1",
+      "Stock_2",
+      "Stock_3",
+      "Stock_4",
+      "Stock_5"
+    ],
+    "first_date": "2020-01-01",
+    "last_date": "2020-12-30",
+    "missing": 0,
+    "weekend_rows": 104
+  },
+  "split": {
+    "train": {
+      "rows": 214,
+      "first_input": "2020-01-05",
+      "last_input": "2020-08-05",
+      "first_target": "2020-01-06",
+      "last_target": "2020-08-06"
+    },
+    "validation": {
+      "rows": 72,
+      "first_input": "2020-08-07",
+      "last_input": "2020-10-17",
+      "first_target": "2020-08-08",
+      "last_target": "2020-10-18"
+    },
+    "test": {
+      "rows": 72,
+      "first_input": "2020-10-19",
+      "last_input": "2020-12-29",
+      "first_target": "2020-10-20",
+      "last_target": "2020-12-30"
+    }
+  },
+  "excluded_boundary_input_dates": [
+    "2020-08-06",
+    "2020-10-18"
+  ],
+  "simple_intercept": 1.373358131661334,
+  "simple_slope": 0.9880067390705837,
+  "multiple_coefficients": {
+    "Stock_1": 1.0139087465148329,
+    "lag_1": 0.03035662126139224,
+    "mean_5": -0.057287040361094305
+  },
+  "validation": [
+    {
+      "strategy": "Ridge",
+      "validation_MAE": 0.8211426430473332
+    },
+    {
+      "strategy": "Persistence baseline",
+      "validation_MAE": 0.8262869585592763
+    },
+    {
+      "strategy": "Simple regression",
+      "validation_MAE": 0.8281894771495496
+    },
+    {
+      "strategy": "Multiple regression",
+      "validation_MAE": 0.8313605343907137
+    }
+  ],
+  "ridge_validation": [
+    {
+      "alpha": 0.01,
+      "validation_MAE": 0.831076224379793
+    },
+    {
+      "alpha": 0.1,
+      "validation_MAE": 0.8285940719364544
+    },
+    {
+      "alpha": 1.0,
+      "validation_MAE": 0.8211426430473332
+    },
+    {
+      "alpha": 10.0,
+      "validation_MAE": 0.8588806118163244
+    },
+    {
+      "alpha": 100.0,
+      "validation_MAE": 1.2025886809183308
+    }
+  ],
+  "selected_name": "Ridge",
+  "best_alpha": 1.0,
+  "test": [
+    {
+      "strategy": "Persistence baseline",
+      "test_MAE": 0.73242213894389,
+      "test_RMSE": 0.9110938111505481
+    },
+    {
+      "strategy": "Ridge",
+      "test_MAE": 0.7800092588988181,
+      "test_RMSE": 0.9689533416342015
+    }
+  ],
+  "next_prediction_after_refit": 93.88998025810015,
+  "last_observation": 93.85531666017228
+}

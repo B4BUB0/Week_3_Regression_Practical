@@ -1,0 +1,5 @@
+strategy,validation_MAE
+Ridge,0.8211426430473332
+Persistence baseline,0.8262869585592763
+Simple regression,0.8281894771495496
+Multiple regression,0.8313605343907137
